@@ -8,30 +8,17 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
-
-@Document(collection = "recipes")
+@Document(collection = "ingredients")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Recipes {
+public class Ingredient {
 
     @Id
     private ObjectId id;
 
     private String name;
 
-    private List<String> ingredients;
-
-
-    private Integer time;
-
-
-    private boolean isGlutenFree;
-    private boolean isSugarFree;
-
-    private boolean isVegetarian;
-
-    private String img;
+    private Integer weight;
 
 }
