@@ -34,4 +34,9 @@ public class Recipe {
     @DocumentReference
     private List<Ingredient> ingredientList;
 
+    public Recipe(String name, Integer time){
+        this.name = name;
+        this.time = time;
+    }
+
 }

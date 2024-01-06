@@ -27,9 +27,8 @@ public class RecipeController {
         return new ResponseEntity<>(recipeService.singleRecipe(id), HttpStatus.OK);
     }
 
-
-    @PostMapping("/post")
-    public Recipe addRecipe(@RequestBody Recipe recipe){
-        return recipeService.addRecipe(recipe);
+    @PostMapping("/postSimpleRecipe")
+    public Recipe addSimpleRecipe(@RequestBody String name, Integer time){
+        return recipeService.createSimpleRecipe(name, time);
     }
 }

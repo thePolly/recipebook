@@ -13,6 +13,7 @@ public class RecipeService {
     @Autowired
     private RecipeRepository recipeRepository;
 
+
     public List<Recipe> allRecipes(){
         return recipeRepository.findAll();
     }
@@ -21,7 +22,8 @@ public class RecipeService {
         return recipeRepository.findById(id);
     }
 
-    public Recipe addRecipe(Recipe recipe){
-        return recipeRepository.save(recipe);
+    public Recipe createSimpleRecipe(String name, Integer time){
+        return recipeRepository.insert(new Recipe(name, time));
     }
+
 }
